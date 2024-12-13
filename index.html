@@ -120,6 +120,20 @@
 
             document.body.appendChild(installButton);
         });
+
+        window.addEventListener('load', () => {
+            const video = document.getElementById('backgroundVideo');
+            if (video) {
+                video.play().catch((error) => {
+                    console.error('Video autoplay failed:', error);
+                    // 재생이 실패할 경우 팝업을 표시하거나 추가 동작 처리
+                });
+            }
+        });
+
+
+        
     </script>
 </body>
 </html>
+
